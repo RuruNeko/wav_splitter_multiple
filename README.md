@@ -15,11 +15,16 @@ ffmpeg-master-latest-win64-gpl-shared.zip
 ./ffmpeg.exe  
 ./avcodec-60.dll  
 ./以下省略  
+
+# 必要なライブラリ  
+requirements.txt　を参照  
+インストール方法  
+pip install -r requirements.txt  
   
 # 実行方法  
 ## 3秒単位で音声カット  
 python main.py [input_dir] [output_dir]  
-example:python main.py c:\testvoice_input c:\testvoice_output
+example:python main.py c:\testvoice_input c:\testvoice_output  
 第一引数はインプットフォルダ  
 第二引数はアウトプットフォルダを指定する  
 **フォルダパスの最後に「/」「\」は不要**、これを入れると動作エラー（面倒なので自動的に除外処理とかはしていない）  
