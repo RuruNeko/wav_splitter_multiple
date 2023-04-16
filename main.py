@@ -35,8 +35,8 @@ def split_wav_file(input_folder, output_dir, output_prefix, split_duration):
 
 if __name__ == "__main__":
     args = sys.argv
-    input_folder= args[0]  # 入力フォルダ
-    output_dir = args[1]  # 分割ファイルを保存するディレクトリ
+    input_folder= args[1]  # 入力フォルダ
+    output_dir = args[2]  # 分割ファイルを保存するディレクトリ
     output_prefix = "split"  # 分割ファイルのプレフィックス
     split_duration = 3  # 分割する秒数
 
