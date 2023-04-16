@@ -2,10 +2,10 @@
 複数ファイル一括処理に対応したフォルダ指定型  
 いい感じにRVCでの学習に必要な機能が洗い出せたら、GUI作って使いやすいツールにするかもしれない  
   
-#fork元  
+# fork元  
 https://github.com/Yanagi-ai/wav_splitter  
   
-#動作に必要な外部ファイル  
+# 動作に必要な外部ファイル  
 https://github.com/BtbN/FFmpeg-Builds/releases  
 にある  
 ffmpeg-master-latest-win64-gpl-shared.zip  
@@ -16,13 +16,18 @@ ffmpeg-master-latest-win64-gpl-shared.zip
 ./avcodec-60.dll  
 ./以下省略  
   
-#実行方法  
+# 実行方法  
+## 3秒単位で音声カット  
 python main.py [input_dir] [output_dir]  
+example:python main.py c:\testvoice_input c:\testvoice_output
 第一引数はインプットフォルダ  
 第二引数はアウトプットフォルダを指定する  
-** フォルダパスの最後に「/」「\」は不要**、これを入れると動作エラー（面倒なので自動的に除外処理とかはしていない）  
+**フォルダパスの最後に「/」「\」は不要**、これを入れると動作エラー（面倒なので自動的に除外処理とかはしていない）  
+
+## 無音カット  
+python silentcut.py [input_dir] [output_dir]  
   
-#【現在あるもの】  
+# 【現在あるもの】  
 ・main.py  
 wavを分割するためのスクリプト  
 n秒ごとに.wavファイルを分割  
