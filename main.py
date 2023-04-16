@@ -34,8 +34,9 @@ def split_wav_file(input_folder, output_dir, output_prefix, split_duration):
             print(f"Exported '{split_file_path}'")
 
 if __name__ == "__main__":
-    input_folder= "C:\RVC\VoiceInput"  # 入力フォルダ
-    output_dir = "C:\RVC\VoiceOutput"  # 分割ファイルを保存するディレクトリ
+    args = sys.argv
+    input_folder= args[0]  # 入力フォルダ
+    output_dir = args[1]  # 分割ファイルを保存するディレクトリ
     output_prefix = "split"  # 分割ファイルのプレフィックス
     split_duration = 3  # 分割する秒数
 

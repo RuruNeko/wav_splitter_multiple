@@ -1,8 +1,28 @@
-# wav_splitter
-  
-いい感じにRVCでの学習に必要な機能が洗い出せたら、GUI作って使いやすいツールにするかもしれない  
-  
-【現在あるもの】  
+# wav_splitter_multiple
+複数ファイル一括処理に対応したフォルダ指定型
+いい感じにRVCでの学習に必要な機能が洗い出せたら、GUI作って使いやすいツールにするかもしれない
+
+#fork元
+https://github.com/Yanagi-ai/wav_splitter
+
+#動作に必要な外部ファイル
+https://github.com/BtbN/FFmpeg-Builds/releases
+にある
+ffmpeg-master-latest-win64-gpl-shared.zip
+内のdll、exeファイルをpython実行ファイルと同フォルダ内に置く
+以下のようになる
+./main.py
+./ffmpeg.exe
+./avcodec-60.dll
+./以下省略
+
+#実行方法
+python main.py [input_dir] [output_dir]
+第一引数はインプットフォルダ
+第二引数はアウトプットフォルダを指定する。
+** フォルダパスの最後に「/」「\」は不要**、これを入れると動作エラー（面倒なので自動的に除外処理とかはしていない）
+
+#【現在あるもの】  
 ・main.py  
 wavを分割するためのスクリプト
 n秒ごとに.wavファイルを分割
