@@ -13,7 +13,7 @@ ffmpeg-master-latest-win64-gpl-shared.zip
 以下のようになる  
 ./main.py  
 ./ffmpeg.exe  
-./avcodec-60.dll  z
+./avcodec-60.dll  
 ./以下省略  
 
 # 必要なライブラリ  
@@ -80,8 +80,7 @@ A:https://www.izotope.jp/jp/products/rx-10/
 https://www.izotope.jp/jp/products/music-production-suite-5-universal-edition/  
   
 Q:ノーマライズ、マスタリングのバッチ処理は無いの？  
-A:以下の2つと上記RX-10もしくはMPS5UEを組み合わせると大量ファイルの自動処理を実装可能  
-  
+A:以下の2つのDAWとツール、そしてiZotope社のOzone10もしくはMPS5UEを組み合わせると大量ファイルの自動処理を実装可能  
 https://www.mi7.co.jp/products/presonus/studioone/  
 Audio Batch Converter  
 https://www.mi7.co.jp/products/presonus/studioone/addon/  
