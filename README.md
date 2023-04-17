@@ -40,7 +40,15 @@ example:python main.py c:\testvoice_input c:\testvoice_output
 **フォルダパスの最後に「/」「\」は不要**、これを入れると動作エラー（面倒なので自動的に除外処理とかはしていない）  
 
 ## 無音カット  
-python silentcut.py [input_dir] [output_dir]  
+python silentcut.py -i [input_dir] -o [output_dir] -p prefix -m 100 -v 40  
+example:python silentcut.py -i c:\testvoice_input -o c:\testvoice_output -p prefix -m 100 -v 40  
+example:python silentcut.py -i c:\testvoice_input -o c:\testvoice_output
+-i 無音対象とするファイル群があるフォルダを指定する  
+-o 無音カットして出力したフォルダを指定する、フォルダが無い場合は作成する  
+-p 分割ファイルの先頭に挿入するファイル名を指定する  
+-m 無音で区切る最小限の長さを指定する。指定しない場合は 100 となる  
+-v 無音と判定する閾値を指定する。指定しない場合は -40 となる  
+-vのみ"正の数値"を指定することで"負の値"として閾値を設定する。具体例として 40 と指定すると -40 となる。  
   
 # 【現在あるもの】  
 ・main.py  
