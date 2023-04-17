@@ -42,7 +42,7 @@ example:python main.py c:\testvoice_input c:\testvoice_output
 ## 無音カット  
 python silentcut.py -i [input_dir] -o [output_dir] -p prefix -m 100 -v 40  
 example:python silentcut.py -i c:\testvoice_input -o c:\testvoice_output -p prefix -m 100 -v 40  
-example:python silentcut.py -i c:\testvoice_input -o c:\testvoice_output
+example:python silentcut.py -i c:\testvoice_input -o c:\testvoice_output  
 -i 無音対象とするファイル群があるフォルダを指定する  
 -o 無音カットして出力したフォルダを指定する、フォルダが無い場合は作成する  
 -p 分割ファイルの先頭に挿入するファイル名を指定する  
