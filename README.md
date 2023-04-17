@@ -13,7 +13,7 @@ ffmpeg-master-latest-win64-gpl-shared.zip
 以下のようになる  
 ./main.py  
 ./ffmpeg.exe  
-./avcodec-60.dll  
+./avcodec-60.dll  z
 ./以下省略  
 
 # 必要なライブラリ  
@@ -21,7 +21,7 @@ requirements.txt　を参照
 インストール方法  
 pip install -r requirements.txt  
 
-# python環境とかライブラリインストールとか面倒くさい！脳死とまでは言わないけどもっと簡単に環境用意させて！  
+# python環境とかライブラリインストールとか面倒くさい！もっと簡単に環境用意させて！  
 1.Anaconda Install  
 https://www.anaconda.com/products/distribution  
 2.Anaconda Prompt を実行  
@@ -61,14 +61,27 @@ wavが無音かどうか判断するスクリプト
 複数ファイル一括処理に対応したフォルダ指定型  
 音声の無音部分をカットして出力するためのスクリプト  
 具体例　ファイルAがあるとする  
-"*" = 発音、"-" = 無音  
+"+" = 発音、"-" = 無音  
 処理前  
-"--**---**--"  
+"--++---++--"  
 処理後  
-"****"  
+"++++"  
+ファイル名の左側「xxxx ms」は元音声の長さ、右側の「xxxx ms」は無音カット後の長さ、両側が長さ同一の場合はカットされていないので注意  
   
 Q:無音判定の推奨閾値は？  
 A:色々試した結果 -40前後、微調整するなら -50～-30ぐらい  
   
 Q:元音声の音量がバラバラ  
-A:マスタリングしてください  
+A:マスタリングorノーマライズしてください  
+  
+Q:元音声にどうしてもノイズが入る、ノイズ入り音声しかない  
+A:https://www.izotope.jp/jp/products/rx-10/  
+もしくは  
+https://www.izotope.jp/jp/products/music-production-suite-5-universal-edition/  
+  
+Q:ノーマライズ、マスタリングのバッチ処理は無いの？  
+A:以下の2つと上記RX-10もしくはMPS5UEを組み合わせると大量ファイルの自動処理を実装可能  
+  
+https://www.mi7.co.jp/products/presonus/studioone/  
+Audio Batch Converter  
+https://www.mi7.co.jp/products/presonus/studioone/addon/  
